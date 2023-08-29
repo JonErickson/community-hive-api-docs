@@ -3,6 +3,7 @@ layout: home
 
 hero:
   name: "Community Hive API Documentation"
+  image: logo.svg
   tagline: A reference for integrating a client service with the Community Hive platform.
   actions:
     - theme: brand
@@ -13,11 +14,17 @@ hero:
       link: https://www.communityhive.com
 
 features:
-  - title: Wordpress
-    details: The official Wordpress Community Hive plugin.
-  - title: Xenforo
-    details: The official Xenforo Community Hive plugin.
   - title: Invision Community
     details: The official Invision Community Hive application.
+    link: https://communityhive.com/about/integrations/invision-community
+  - title: Squarespace
+    details: The official Squarespace Community Hive plugin.
+    link: https://communityhive.com/about/integrations/squarespace
+  - title: Wordpress
+    details: The official Wordpress Community Hive plugin.
+    link: https://communityhive.com/about/integrations/wordpress
+  - title: Xenforo
+    details: The official Xenforo Community Hive plugin.
+    link: https://communityhive.com/about/integrations/xenforo
 ---
 
