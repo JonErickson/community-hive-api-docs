@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to the guide on creating a seamless integration with Community Hive's powerful API for your client application. This documentation will guide you through the process of integrating your community with the Community Hive platform.
+This documentation is intended to guide you through the process of creating your own client application and integrating your community with the Community Hive platform.
 
 ## Prerequisites
 
