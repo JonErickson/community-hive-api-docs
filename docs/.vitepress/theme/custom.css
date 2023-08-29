@@ -1,0 +1,7 @@
+:root {
+    --vp-c-brand: #2A9C66;
+    --vp-c-brand-1: var(--vp-c-brand);
+    --vp-home-hero-name-color: var(--vp-c-brand);
+    --vp-button-brand-bg: var(--vp-c-brand);
+    --vp-button-brand-hover-bg: var(--vp-c-brand);
+}
