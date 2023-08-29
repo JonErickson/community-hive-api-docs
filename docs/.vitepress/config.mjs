@@ -4,7 +4,7 @@ export default defineConfig({
   title: "Community Hive API Docs",
   description: "A reference for integrating a client service with the Community Hive platform.",
   head: [['meta', { name: 'theme-color', content: '#2A9C66' }]],
-  base: '/repo/',
+  base: '/community-hive-api-docs/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
