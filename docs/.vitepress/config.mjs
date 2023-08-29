@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en-US',
   title: "Community Hive API Documentation",
-  description: "A reference for integrating a client service with the Community Hive platform.",
+  description: "A reference for integrating a client application with the Community Hive platform.",
   head: [['meta', { name: 'theme-color', content: '#2A9C66' }]],
   base: '/community-hive-api-docs/',
   themeConfig: {

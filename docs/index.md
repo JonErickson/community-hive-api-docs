@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Community Hive API Documentation"
   image: logo.svg
-  tagline: A reference for integrating a client service with the Community Hive platform.
+  tagline: A reference for integrating a client application with the Community Hive platform.
   actions:
     - theme: brand
       text: Getting Started
