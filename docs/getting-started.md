@@ -73,9 +73,9 @@ $jwsBuilder = new JWSBuilder(new AlgorithmManager([new HS256()]));
 $defaultPayload = [
     'iss' => CLIENT_APPLICATION_URL,
     'sub' => COMMUNITY_HIVE_SITE_ID,
-    'iat' => time(),
-    'nbf' => time(),
-    'exp' => time() + 60,
+    'iat' => time(), // Issued at time (current Unix timestamp)
+    'nbf' => time(), // Issued at time (current Unix timestamp)
+    'exp' => time() + 60, // Expiry time (current Unix timestamp + 60 seconds)
     'aud' => 'communityhive',
 ];
 
@@ -93,6 +93,24 @@ $jws = $jwsBuilder
 
 // Serialize and return the JWT token
 return $jwsCompactSerializer->serialize($jws, 0);
+```
+```javascript [Javascript]
+const jwt = require('jsonwebtoken');
+
+// Define your payload and secret key
+const payload = {
+    iss: CLIENT_APPLICATION_URL,
+    sub: COMMUNITY_HIVE_SITE_ID,
+    iat: Math.floor(Date.now() / 1000), // Issued at time (current Unix timestamp)
+    nbf: Math.floor(Date.now() / 1000), // Not before time (current Unix timestamp)
+    exp: Math.floor(Date.now() / 1000) + 60, // Expiry time (current Unix timestamp + 60 seconds)
+    aud: 'communityhive',
+    // ... add any additional claims here
+};
+
+// Encode the token
+const token = jwt.sign(payload, COMMUNITY_HIVE_SITE_KEY, { algorithm: 'HS256' });
+console.log(token);
 ```
 :::
 
@@ -126,6 +144,16 @@ if (! $verifier->verifyWithKey($data, $key, 0)) {
 }
 
 return json_decode($data->getPayload() ?? [], true);
+```
+```javascript [Javascript]
+const jwt = require('jsonwebtoken');
+
+try {
+  const decoded = jwt.verify(token, COMMUNITY_HIVE_SITE_KEY);
+  console.log(decoded);
+} catch (error) {
+  console.error('Error decoding JWT token:', error.message);
+}
 ```
 :::
 
